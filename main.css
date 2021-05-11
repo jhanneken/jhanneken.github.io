@@ -1,0 +1,188 @@
+body
+{
+	position: relative;
+	margin: 1em;
+	background: #0D2335;
+	color: #FFF0DA;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5em;
+}
+
+h1
+{
+	margin-top: 0.1em;
+	margin-bottom: 0.1em;
+	background: transparent;
+	color: #E0534E;
+	font-family: 'Bree Serif', serif;
+	font-size: 2em;
+	display: inline-block;
+}
+
+p
+{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.full-width
+{
+	background: #102B42;
+	padding: 1em;
+	-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.21); 
+	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.21);
+	border-radius: 0.4em;
+}
+
+.outside
+{
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+}
+
+tag
+{
+	color: #3B576D;
+	background: transparent;
+	font-size: 0.8em;
+	margin-top: 1em;
+	border: solid;
+	border-width: 1px;
+	padding-top: 0.1em;
+	padding-bottom: 0.2em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.nbutton {
+	line-height: 1.7em;
+	padding: 0em 0.6em;
+	font-size: 1.5rem;
+	text-align: center;
+	color: #FF6159;
+	border-radius: 1.7em;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FF6159;
+	background-color: transparent;
+}
+
+.nbutton:hover {
+	background-color: #FF6159;
+	color: #0D2335;
+	border-width: 2px;
+	border-color: transparent;
+}
+
+.nbutton:active {
+	background-color: #E0534E;
+}
+
+.grid-container-two {
+	margin-top: 1em;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+}
+
+
+.grid-container-three {
+	margin-top: 1em;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+}
+
+.grid-container-four {
+	margin-top: 1em;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+}
+
+.grid-item {
+	background: #102B42;
+	padding: 1em;
+	-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.21); 
+	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.21);
+	border-radius: 0.4em;
+}
+
+
+/* Include breakpoints at 320px, 480px, 768px, 992px, 1200px*/
+@media screen and (max-width: 1200px)
+	.grid-container-two {
+		grid-template-columns: 50% 50%;
+	}
+	.grid-container-three {
+		grid-template-columns: 100%;
+	}
+	.grid-container-four {
+		grid-template-columns: 50% 50%;
+	}
+}
+
+@media screen and (max-width: 768px)
+{
+	body
+	{
+	margin: 0em;
+	font-size: 1em;
+	}
+	h1
+{
+	font-size: 1.6em;
+}
+
+p
+{
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.full-width
+{
+	padding: 0.5em;
+}
+
+tag
+{
+	font-size: 0.7em;
+}
+
+.nbutton {
+	line-height: 1.3em;
+	padding: 0.2em 0.6em;
+	font-size: 1rem;
+	text-align: center;
+	color: #FF6159;
+	border-radius: 1.7em;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FF6159;
+	background-color: transparent;
+}
+
+.nbutton:hover {
+	background-color: #FF6159;
+	color: #0D2335;
+	border-width: 2px;
+	border-color: transparent;
+}
+
+.nbutton:active {
+	background-color: #E0534E;
+}
+	.grid-container-two {
+		grid-template-columns: 100%;
+	}
+	.grid-container-three {
+		grid-template-columns: 100%;
+	}
+	.grid-container-four {
+		grid-template-columns: 100%;
+	}
+}
