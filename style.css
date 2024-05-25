@@ -1,0 +1,25 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+}
+
+body {
+	background: rgb(179,255,240);
+	background: linear-gradient(90deg, rgb(210, 255, 246) 0%, rgb(238, 255, 215) 24%, rgb(234, 217, 255) 100%); 
+}
+
+.heading1 {
+	font-size: 2em;
+}
+
+.paragraph {
+	font-size: 1.2em;
+}
+
+.centerObjects {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 80vh;
+}
