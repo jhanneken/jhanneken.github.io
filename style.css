@@ -1,11 +1,16 @@
+/* mouse-x and mouse-y created by Javascript */
+
 * {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1em;
+	--h-rotation: calc((var(--mouse-x) - 0.5) * -30deg);
+	--v-rotation: calc((var(--mouse-y) - 0.5) * -30deg);
 }
 
 body {
 	background: rgb(179,255,240);
 	background: linear-gradient(90deg, rgb(210, 255, 246) 0%, rgb(238, 255, 215) 24%, rgb(234, 217, 255) 100%); 
+	overflow: hidden;
 }
 
 .heading1 {
@@ -18,8 +23,18 @@ body {
 
 .centerObjects {
 	display: flex;
-	flex-direction: column;
+	position: relative;
 	align-items: center;
 	justify-content: center;
-	min-height: 80vh;
+	min-height: 96vh;
+}
+
+.hover-card {
+	position: absolute;
+	background-color: rgb(255, 255, 255, 0.3);
+	transform:  rotate3d(0, 1, 0, var(--h-rotation)) rotate3d(1, 0, 0, var(--v-rotation));
+	padding: 1.4em;
+	border-radius: 0.6em;
+	border:rgba(255, 255, 255, 0.5) solid 1.4px;
+	backdrop-filter: blur(10px);
 }
