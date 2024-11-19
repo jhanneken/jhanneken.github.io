@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CastleRunP5</title>
+	<style>
+		html, body {
+			margin: 0;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+		}
+
+		#p5-container {
+			width: 800px;
+			height: 800px;
+			transform-origin: center center;
+		}
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/addons/p5.sound.min.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			function scaleDown() {
+				const container = document.getElementById("p5-container");
+				const width = window.innerWidth;
+				const height = window.innerHeight;
+				const targetSize = 800;
+				let scaleFactor = Math.min(width / targetSize, height / targetSize, 1);
+				container.style.transform = `scale(${scaleFactor})`;
+			}
+			window.addEventListener("resize", scaleDown);
+			scaleDown();
+		});
+	</script>
+</head>
+
+<body>
+	<div id="p5-container"></div>
+	<script src="sketch.js"></script>
+</body>
+</html>
