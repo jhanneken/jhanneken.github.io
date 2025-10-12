@@ -1,34 +1,196 @@
-<!DOCTYPE html>
-<html>
-<title>Johannes Hanneken</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans&display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="de">
 
-<body class="centerObjects">
-	<!-- Header -->
-	<header>
-	</header>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Johannes Hanneken">
+    <meta name="description"
+        content="johannes-hanneken.de ist die Portfolio-Webseite von mir, Johannes Hanneken. Hier möchte ich meine Arbeiten vorstellen und eine Kontaktmöglichkeit bieten.">
+    <title>Johannes Hanneken | Portfolio</title>
 
-	<div class="hover-card ">
-		<h1 class="heading1">Hallo!</h1>
-		<p class="paragraph">Diese Seite befindet sich gerade im Aufbau.</p>
-		<p class="paragraph">Ich bin erreichbar unter: johanneshanneken@outlook.de</p>
+    <!-- Font-Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 
-	</div>
-	<!-- 	<a style="position: absolute; left: 10px;" href="./zoe/index.html">Zoé Website</a> -->
-	<script>
-		const root = document.documentElement;
+    <!-- CSS -->
+    <link href="styles/style.css" rel="stylesheet">
 
-		document.addEventListener('mousemove', evt => {
-			let x = evt.clientX / innerWidth;
-			let y = evt.clientY / innerHeight;
+    <!-- generated from https://realfavicongenerator.net -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2e68c4">
+    <meta name="msapplication-TileColor" content="#f5fdff">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light dark">
+</head>
 
-			root.style.setProperty('--mouse-x', x);
-			root.style.setProperty('--mouse-y', y);
-		});</script>
+<body>
+    <header>
+        <div class="container alignNav">
+            <nav class="sticky-top">
+                <div class="nav-elements">
+                    <a class="nav-link active" href="#welcome">Home</a>
+                    <a class="nav-link" href="#projects">Projekte</a>
+                    <a class="nav-link" href="#about-me">Über mich</a>
+                    <a class="nav-link" href="#contact">Kontakt</a>
+                </div>
+                <div class="bgLeft"></div>
+                <div class="bgRight"></div>
+                <div class="nav-highlighter"></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <div class="container">
+                <video id="welcomeVideo" autoplay playsinline loop muted preload poster="/img/poster.png">
+                    <source src="video/welcome.webm" type="video/webm">
+                </video>
+                <div id="welcomeText">
+                    <h2 class="rotatingText">
+                        <span class="rotatingTextElement">Mein Name ist Johannes.</span>
+                        <span class="rotatingTextElement">Willkommen auf meiner Portfolio-Website!</span>
+                        <span class="rotatingTextElement">Hier ist eine Auswahl meiner Arbeiten zu sehen.</span>
+                    </h2>
+                    <h1>Hallo!</h1>
+                    <p>
+                        <a class="btn-primary" href="#about-me" role="button">ÜBER MICH</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container reveal ">
+                <h1 class="mt10">Meine Projekte</h1>
+                <h2>Hier ist eine Auswahl verschiedener beispielhafter Projekte, an denen ich gearbeitet habe:</h2>
+
+                <div class="project leftproject mt-5" id="hemd">
+                    <div class="projectContent">
+                        <a href="/hemd.html"><img class="bg-image" src="/img/hemd/hemd_vorschau.jpg" alt="Hemd"></a>
+                        <h2>Gestalte Dein Hemd!</h2>
+                        <h3>Studienprojekt</h3>
+                    </div>
+                </div>
+
+                <div class="project rightproject" id="music">
+                    <div class="projectContent">
+                        <a href="/musikvisualisierung.html"><img class="bg-image" src="/img/musik/musik_vorschau.jpg"
+                                alt="Musikvisualisierung"></a>
+                        <h2>Musikvisualisierung</h2>
+                        <h3>Studienprojekt</h3>
+                    </div>
+                </div>
+
+                <div class="project leftproject" id="castle">
+                    <div class="projectContent">
+                        <a href="/castleclash.html"><img class="bg-image" src="/img/castle/Castle_Vorschau.jpg"
+                                alt="Castle Clash"></a>
+                        <h2>Castle Clash</h2>
+                        <h3>Studienprojekt</h3>
+                    </div>
+                </div>
+
+
+                <div class="project rightproject" id="osnahack">
+                    <div class="projectContent">
+                        <a href="/osnahack.html"><img class="bg-image" src="/img/osnahack/osnahack_vorschau.jpg"
+                                alt="Osnahack"></a>
+                        <h2>Osnahack - „MoveOS“</h2>
+                        <h3>Privates Projekt</h3>
+                    </div>
+                </div>
+
+                <div class="project leftproject" id="welt">
+                    <div class="projectContent">
+                        <a href="/weltkugel.html"><img class="bg-image" src="/img/welt/welt_vorschau.png"
+                                alt="Welt"></a>
+                        <h2>Drehende Weltkugel</h2>
+                        <h3>Studienprojekt</h3>
+
+                    </div>
+                </div>
+
+                <div class="project rightproject" id="vr">
+                    <div class="projectContent">
+                        <a href="/vrapp.html"><img class="bg-image" src="/img/vr/vr_vorschau.jpg" alt="VR-App"></a>
+                        <h2>VR App</h2>
+                        <h3>Studienprojekt</h3>
+                    </div>
+                </div>
+
+                <div class="project leftproject" id="bad">
+                    <div class="projectContent">
+                        <a href="/schwimmbad.html"><img class="bg-image" src="/img/bad/bad_vorschau.jpg" alt="bad"></a>
+                        <h2>Visualisierung eines Schwimmbads</h2>
+                        <h3>Privates Projekt</h3>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+
+
+        <section id="about-me">
+            <div class="container reveal">
+                <h1 class="mt10">Über mich</h1>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="img/aboutme.png" alt="Johannes Hanneken">
+                    </div>
+                    <div class="about-text">
+                        <div>
+                            <p>Mein Name ist Johannes Hanneken. Ich bin Interaktionsdesigner aus Osnabrück. Nach meinem Studium im Fach Media & Interaction Design arbeite ich aktuell in einem Makerspace an der Uni.</p>
+                            <p>Ich bin Bauzeichner, interessiere mich für Architektur, Design, Kunst und alles, was es mir ermöglicht, technische Spielereien kennenzulernen und auszuprobieren.</p>
+                            <p>Meine Leidenschaft gilt der Schnittstelle zwischen digitaler und physischer Welt, insbesondere im Bereich von interaktiven Anwendungen mit 3D-Elementen.</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="contact">
+            <div class="container reveal">
+                <h1 class="mt10">Kontakt</h1>
+                <h2>Bei Fragen und Anregungen bin ich hier zu erreichen:</h2>
+                <div class="contact-grid">
+                    <div class="socials">
+                        <img src="./svg/Mail.svg" alt="Mail" type="image/svg+xml" height="50"/>
+                        <a href="mailto:johanneshanneken@outlook.de">johanneshanneken@outlook.de</a>
+                    </div>
+                    <div class="socials">
+                        <img src="./svg/LinkedIn.svg" alt="LinkedIn" type="image/svg+xml"/>
+                        <a href="https://www.linkedin.com/in/johannes-hanneken-0a5392131">LinkedIn</a>
+                    </div><!-- 
+                    <div class="socials">
+                        <img src="./svg/Fiverr.svg" alt="Fiverr" type="image/svg+xml"/>
+                        <a href="https://www.fiverr.com/johanneshanneken">Fiverr</a>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <div class="vertSpacer"></div>
+
+    </main>
+    </div>
+
+    <footer class="mt-auto">
+        <div class="container vert-center">
+            <div class="logo">
+                <img src="/img/logo.png" alt="Logo" height="64px">
+                <div class="hanneken"> <span class="firstname">JOHANNES</span><span class="lastname"> HANNEKEN</span>
+                </div>
+            </div>
+            <div id="copyright">© 2025</div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
