@@ -8,17 +8,24 @@
     <meta name="description" content="johannes-hanneken.de ist die Portfolio-Webseite von mir, Johannes Hanneken. Hier möchte ich meine Arbeiten vorstellen und eine Kontaktmöglichkeit bieten.">
     <title>Projekt | Osnahack</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <!-- Font-Awesome Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-
-    <!-- Bootstrap Gallery Plugin -->
-    <link rel="stylesheet" href="libraries/bootstrap-gallery.min.css">
-
     <!-- CSS -->
     <link href="styles/style.css" rel="stylesheet">
+
+    <style>
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 
     <!-- generated from https://realfavicongenerator.net -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -35,11 +42,9 @@
         <div class="container ">
             <nav class="sticky-top">
                 <div class="nav-elements">
-                    <a class="nav-link active" href="index.html#projects">
-                        <i class="fas fa-home"></i> Home</a>
-                </div>
-                <div class="bgLeft"></div>
-                <div class="bgRight"></div>
+                    <p>
+                        <a class="btn-primary" href="index.html#projects" role="button">HOME</a>
+                    </p>
             </nav>
         </div>
     </header>
@@ -48,50 +53,26 @@
         <div id="projectbg"></div>
 
         <div class="container reveal">
-            <div class="vertSpacer"></div>
-            <h1>Castle Clash</h1>
 
             <div class="projectPage">
+            <h1>Castle Clash</h1>
                 <div class="ptype">Januar 22, Studienprojekt</div>
                 <div class="description">
                     <p>Zusammen mit einem Kommilitonen habe ich ein Geschicklichkeitsspiel namens Castle Clash entwickelt, das verschiedene Spielmodi enthält. Zu diesen Spielmodi gehören ein Jump’n Run- ein Verteidigungs- und ein Münzsammelspiel.</p>
                     <p>Das Spiel ist in Processing, einer auf Java basierenden Programmiersprache, geschrieben.</p>
+                    <p>2024 habe ich einen Teil des Spiels in P5.JS portiert:</p>
+                    <div class="playlink" style="background-image: url('img/castle/Castle_Spiellink.jpg');">
+                        <a class="btn-primary" href="./castlerunp5/index.html" role="button" target="_blank" rel="noopener noreferrer">SPIELEN</a>
+                    </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-xl-4 projectImage">
-                        <a href="img/castle/castle01.jpg" class="thumbnail">
-                            <img src="img/castle/castle01th.jpg" alt="Castle Clash - Bild 1" />
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-xl-4 projectImage">
-                        <a href="img/castle/castle02.jpg" class="thumbnail">
-                            <img src="img/castle/castle02th.jpg" alt="Castle Clash - Bild 2" />
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-xl-4 projectImage">
-                        <a href="img/castle/castle03.jpg" class="thumbnail">
-                            <img src="img/castle/castle03th.jpg" alt="Castle Clash - Bild 3" />
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-xl-4 projectImage">
-                        <a href="img/castle/castle04.jpg" class="thumbnail">
-                            <img src="img/castle/castle04th.jpg" alt="Castle Clash - Bild 4" />
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-xl-4 projectImage">
-                        <a href="img/castle/castle05.jpg" class="thumbnail">
-                            <img src="img/castle/castle05th.jpg" alt="Castle Clash - Bild 5" />
-                        </a>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4 projectImage">
-                        <a href="img/castle/castle06.jpg" class="thumbnail">
-                            <img src="img/castle/castle06th.jpg" alt="Castle Clash - Bild 6" />
-                        </a>
-                    </div>
+                <div class="image-grid">
+                    <img src="img/castle/castle01.jpg" alt="Castle Clash - Bild 1" />
+                    <img src="img/castle/castle02.jpg" alt="Castle Clash - Bild 2" />
+                    <img src="img/castle/castle03.jpg" alt="Castle Clash - Bild 3" />
+                    <img src="img/castle/castle04.jpg" alt="Castle Clash - Bild 4" />
+                    <img src="img/castle/castle05.jpg" alt="Castle Clash - Bild 5" />
+                    <img src="img/castle/castle06.jpg" alt="Castle Clash - Bild 6" />
                 </div>
             </div>
             <div class="vertSpacer"></div>
@@ -104,13 +85,10 @@
                 <div class="hanneken"> <span class="firstname">JOHANNES</span><span class="lastname"> HANNEKEN</span>
                 </div>
             </div>
-            <div id="copyright">© 2023</div>
+            <div id="copyright">© 2025</div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="libraries/bootstrap-gallery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </body>
 

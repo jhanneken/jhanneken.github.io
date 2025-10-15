@@ -271,24 +271,12 @@ section {
 }
 
 #welcome {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   height: 100vh;
   max-height: 100vh;
   background: #F5F1ED;
   position: relative;
-}
-
-@-webkit-keyframes showWelcome {
-  0% {
-    opacity: 0;
-    top: 24rem;
-  }
-  100% {
-    opacity: 1;
-    top: 20rem;
-  }
 }
 
 @keyframes showWelcome {
@@ -471,7 +459,6 @@ footer #copyright {
 }
 
 header {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -501,19 +488,7 @@ video {
   left: 0;
   transform: translate(0, -50%);
   opacity: 0;
-  -webkit-animation: fade-in 0.5s ease-in-out forwards;
-          animation: fade-in 0.5s ease-in-out forwards;
-}
-
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translate(0, -60%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0, -50%);
-  }
+  animation: fade-in 0.5s ease-in-out forwards;
 }
 
 @keyframes fade-in {
@@ -527,19 +502,7 @@ video {
   }
 }
 .fade-out {
-  -webkit-animation: fade-out 0.5s ease-in-out forwards;
-          animation: fade-out 0.5s ease-in-out forwards;
-}
-
-@-webkit-keyframes fade-out {
-  from {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  to {
-    opacity: 0;
-    transform: translate(-50%, -40%);
-  }
+  animation: fade-out 0.5s ease-in-out forwards;
 }
 
 @keyframes fade-out {
@@ -558,7 +521,6 @@ header {
 }
 
 #logo-top {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 64px;
@@ -728,7 +690,6 @@ p {
 }
 
 .hero-heading {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }

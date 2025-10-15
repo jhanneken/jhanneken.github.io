@@ -8,17 +8,36 @@
     <meta name="description" content="johannes-hanneken.de ist die Portfolio-Webseite von mir, Johannes Hanneken. Hier möchte ich meine Arbeiten vorstellen und eine Kontaktmöglichkeit bieten.">
     <title>Projekt | Gestalte Dein Hemd!</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
     <!-- Font-Awesome Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 
-    <!-- Bootstrap Gallery Plugin -->
-    <link rel="stylesheet" href="libraries/bootstrap-gallery.min.css">
-
     <!-- CSS -->
     <link href="styles/style.css" rel="stylesheet">
+
+    <style>
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .videoContainer {
+            width: 100%;
+        }
+
+        .videoContainer video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 
     <!-- generated from https://realfavicongenerator.net -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -49,9 +68,9 @@
 
         <div class="container reveal">
             <div class="vertSpacer"></div>
-            <h1>Gestalte Dein Hemd!</h1>
 
             <div class="projectPage">
+                <h1>Gestalte Dein Hemd!</h1>
                 <div class="ptype">Juli 22, Studienprojekt</div>
                 <div class="description">
                     <p>„Gestalte Dein Hemd“ ist der Name eines App-Prototypen, der im Rahmen meines Studiums entstanden ist. Die App soll der nutzenden Person helfen ein individuelles Hemd zu gestalten und anschließend zu bestellen. Unter anderem gibt es
@@ -59,45 +78,20 @@
                     <p>Der Prototyp wurde mit Figma und Protopie erstellt.
                     </p>
                 </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-xl-4 projectImage">
-                        <a href="img/hemd/hemd01.jpg" class="thumbnail">
-                            <img src="img/hemd/hemd01th.jpg" alt="Gestalte Dein Hemd - Bild 1" />
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-xl-4 projectImage">
-                        <a href="img/hemd/hemd02.jpg" class="thumbnail">
-                            <img src="img/hemd/hemd02th.jpg" alt="Gestalte Dein Hemd - Bild 2" />
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-xl-4 projectImage">
-                        <a href="img/hemd/hemd03.jpg" class="thumbnail">
-                            <img src="img/hemd/hemd03th.jpg" alt="Gestalte Dein Hemd - Bild 3" />
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-xl-4 projectImage">
-                        <a href="img/hemd/hemd04.jpg" class="thumbnail">
-                            <img src="img/hemd/hemd04th.jpg" alt="Gestalte Dein Hemd - Bild 4" />
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-xl-4 projectImage">
-                        <a href="img/hemd/hemd05.jpg" class="thumbnail">
-                            <img src="img/hemd/hemd05th.jpg" alt="Gestalte Dein Hemd - Bild 5" />
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-xl-4 projectImage">
-                        <div class="videoContainer">
-                            <video id="hemd" controls>
+                <div class="image-grid">
+                    <img src="img/hemd/hemd01.jpg" alt="Gestalte Dein Hemd - Bild 1" />
+                    <img src="img/hemd/hemd02.jpg" alt="Gestalte Dein Hemd - Bild 2" />
+                    <img src="img/hemd/hemd03.jpg" alt="Gestalte Dein Hemd - Bild 3" />
+                    <img src="img/hemd/hemd04.jpg" alt="Gestalte Dein Hemd - Bild 4" />
+                    <img src="img/hemd/hemd05.jpg" alt="Gestalte Dein Hemd - Bild 5" />
+                </div>
+                
+                    <div class="videoContainer">
+                        <video id="hemd" controls>
                             <source src="img/hemd/HemdMP4.mp4" type="video/mp4">
                             Dein Browser unterstützt die Wiedergabe von Video-Elementen nicht.
-                        </video></div>
+                        </video>
                     </div>
-                </div>
             </div>
             <div class="vertSpacer"></div>
     </main>
@@ -109,13 +103,10 @@
                 <div class="hanneken"> <span class="firstname">JOHANNES</span><span class="lastname"> HANNEKEN</span>
                 </div>
             </div>
-            <div id="copyright">© 2023</div>
+            <div id="copyright">© 2025</div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="libraries/bootstrap-gallery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </body>
 

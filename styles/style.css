@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* colors */
 /* font */
 @font-face {
@@ -567,18 +568,18 @@ footer #copyright {
   }
 }
 
-#contact .container .socials {
+#about-me .container .socials {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
   padding: 1rem 0 1rem 0;
 }
-#contact .container .socials a {
+#about-me .container .socials a {
   color: #5496ff;
   text-decoration: none;
 }
-#contact .container .socials img {
+#about-me .container .socials img {
   width: 2rem;
   height: auto;
 }
@@ -1025,4 +1026,80 @@ header {
 
 .mtext.active {
   display: block;
+}
+
+.showcaseContainer {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.column {
+  flex: 1; /* alle Spalten gleich groß */
+  transition: all 0.6s ease;
+  display: flex;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Wenn man über den Container hovert: alle Spalten schrumpfen */
+.showcaseContainer:hover .column {
+  flex: 0 0 20%; /* fixe Breite von 10px */
+}
+
+/* Die gehoverte Spalte wächst und nimmt den Rest ein */
+.showcaseContainer .column:hover {
+  flex: 1; /* wächst wieder auf vollen Anteil */
+}
+
+.projectPage {
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+}
+
+.ptype {
+  color: #5496ff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 576px) {
+  .ptype {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 768px) {
+  .ptype {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 992px) {
+  .ptype {
+    font-size: 1.2rem;
+  }
+}
+
+.playlink {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.playlink::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+}
+.playlink a {
+  position: relative;
+  z-index: 1;
 }/*# sourceMappingURL=style.css.map */

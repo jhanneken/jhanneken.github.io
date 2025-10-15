@@ -563,7 +563,7 @@ footer {
     }
 }
 
-#contact .container {
+#about-me .container {
     .socials {
         display: flex;
         flex-direction: row;
@@ -1030,4 +1030,85 @@ $textDuration: 16s;
 
 .mtext.active {
     display: block;
+}
+
+
+.showcaseContainer {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.column {
+  flex: 1; /* alle Spalten gleich groß */
+  transition: all 0.6s ease;
+  display: flex;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Wenn man über den Container hovert: alle Spalten schrumpfen */
+.showcaseContainer:hover .column {
+  flex: 0 0 20%; /* fixe Breite von 10px */
+}
+
+/* Die gehoverte Spalte wächst und nimmt den Rest ein */
+.showcaseContainer .column:hover {
+  flex: 1; /* wächst wieder auf vollen Anteil */
+}
+
+
+.projectPage {
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+}
+
+.ptype {
+    color: $primary;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+    @media (min-width: 576px) {
+        font-size: 1.1rem;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 1.2rem;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+.playlink {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+    }
+
+    a {
+        position: relative;
+        z-index: 1;
+    }
 }

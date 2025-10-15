@@ -25,7 +25,7 @@ document.addEventListener('scroll', function () {
     changeNav();
 });
 
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     if (e.target.closest('nav')) {
         changeNav();
     }
@@ -36,22 +36,22 @@ var TabHighlighter = {
         var activeLink = document.querySelector('nav.sticky-top .nav-elements .nav-link.active');
         var navElements = document.querySelector('.nav-elements');
         var highlighter = document.querySelector('.nav-highlighter');
-        
+
         if (activeLink && navElements && highlighter) {
             var activeRect = activeLink.getBoundingClientRect();
             var navRect = navElements.getBoundingClientRect();
-            
+
             highlighter.style.left = (activeRect.left - navRect.left) + 'px';
             highlighter.style.width = activeRect.width + 'px';
         }
     }
 };
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
     TabHighlighter.refresh();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     TabHighlighter.refresh();
 });
 
@@ -133,24 +133,24 @@ class CustomCarousel {
         this.items = element.querySelectorAll('.carousel-item');
         this.currentIndex = 0;
         this.indicators = document.querySelectorAll('#carousel-text-indicators .carousel-text-indicator');
-        
+
         this.init();
     }
-    
+
     init() {
         this.showItem(0);
     }
-    
+
     showItem(index) {
         // Hide all items
         this.items.forEach(item => item.classList.remove('active'));
-        
+
         // Show current item
         if (this.items[index]) {
             this.items[index].classList.add('active');
             this.currentIndex = index;
         }
-        
+
         // Update indicators
         this.indicators.forEach((indicator, i) => {
             if (i === index) {
@@ -160,13 +160,13 @@ class CustomCarousel {
             }
         });
     }
-    
+
     to(index) {
         if (index >= 0 && index < this.items.length) {
             this.showItem(index);
         }
     }
-    
+
     static getInstance(element) {
         if (!element._customCarousel) {
             element._customCarousel = new CustomCarousel(element);
@@ -179,6 +179,7 @@ const welcomeSection = document.getElementById('welcome');
 const welcomeVideo = document.getElementById('welcomeVideo');
 
 function repositionVideo() {
+    if (!welcomeVideo || !welcomeSection) return;
     const sectionRect = welcomeSection.getBoundingClientRect();
     const videoRect = welcomeVideo.getBoundingClientRect();
     const heightDifference = sectionRect.height - videoRect.height;
