@@ -542,25 +542,11 @@ footer {
 }
 
 .about-text {
-    padding: 0.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    padding: 0 1rem 1rem 1rem;
-
-    @media (min-width: 576px) {
-        padding: 0 1rem 1rem 1rem;
-    }
-
-    @media (min-width: 768px) {
-        padding: 0 2rem 1rem 2rem;
-    }
-
-    @media (min-width: 992px) {
-        padding: 0 5rem 1rem 5rem;
-    }
 }
 
 #about-me .container {
@@ -642,6 +628,7 @@ footer {
     grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 
     @media (min-width: 768px) {
         grid-template-columns: 1fr 1fr;
@@ -1083,10 +1070,6 @@ $textDuration: 16s;
     }
 }
 
-
-
-
-
 .playlink {
     width: 100%;
     height: 300px;
@@ -1104,7 +1087,7 @@ $textDuration: 16s;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.75);
+        background: rgba(0, 0, 0, 0.85);
     }
 
     a {
