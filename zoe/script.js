@@ -3,21 +3,27 @@ let sections = document.querySelectorAll("section");
 let menuItems = document.querySelectorAll(".nav-elements a");
 
 window.onscroll = () => {
-  sections.forEach((section) => {
-    let top = window.scrollY;
-    let offset = section.offsetTop - 150;
-    let height = section.offsetHeight;
-    let id = section.getAttribute("id");
+  let maxVisible = 0;
+  let activeId = null;
 
-    if (top >= offset && top < offset + height) {
-      menuItems.forEach((link) => {
-        link.classList.remove("active");
-        document
-          .querySelector(`.nav-elements a[href*=${id}]`)
-          .classList.add("active");
-      });
+  sections.forEach((section) => {
+    let rect = section.getBoundingClientRect();
+    let visibleHeight = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0));
+    let percentage = visibleHeight / window.innerHeight;
+
+    if (percentage > 0.5 && percentage > maxVisible) {
+      maxVisible = percentage;
+      activeId = section.getAttribute("id");
     }
   });
+
+  menuItems.forEach((link) => {
+    link.classList.remove("active");
+  });
+
+  if (activeId) {
+    document.querySelector(`.nav-elements a[href*=${activeId}]`).classList.add("active");
+  }
 };
 
 // Tab Highlighter Functionality
@@ -106,6 +112,7 @@ function changeNav() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+/* document.addEventListener("DOMContentLoaded", () => {
   new Glide(".glide").mount();
 });
+ */

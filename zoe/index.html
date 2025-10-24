@@ -8,6 +8,7 @@
     <meta name="description"
         content="ZOÉ-PEHLKE.de ist die Portfolio-Webseite von mir, Zoé Pehlke. Hier möchte ich meine Arbeiten vorstellen und eine Kontaktmöglichkeit bieten.">
     <title>Zoé Pehlke | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,6 +19,11 @@
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="styles/glide.core.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link href="styles/style.css" rel="stylesheet">
@@ -41,7 +47,6 @@
                     <a class="nav-link active" href="#welcome">Home</a>
                     <a class="nav-link" href="#projects">Arbeiten</a>
                     <a class="nav-link" href="#exhibitions">Ausstellungen</a>
-                    <a class="nav-link" href="#about-me">Über mich</a>
                     <a class="nav-link" href="#contact">Kontakt</a>
                 </div>
                 <div class="bgLeft"></div>
@@ -52,8 +57,10 @@
     </header>
 
     <main>
+
+
         <section id="welcome">
-            <div class="glide">
+<!--             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
                         <li class="glide__slide" id="slide-a">
@@ -93,14 +100,22 @@
                     <button class="glide__bullet" data-glide-dir="=1"></button>
                     <button class="glide__bullet" data-glide-dir="=2"></button>
                 </div>
-            </div>
+            </div> -->
+        <div id="canvasContainer">
+        </div>
+        <div style="display: none;">
+            <a href="./chiro.html" id="chiro-link">Chiro</a>
+            <a href="./neue-welten.html" id="neue-welten-link">Neue Welten</a>
+            <a href="./tape-und-papier.html" id="tape-papier-link">Tape und Papier</a>
+        </div>
+
 
         </section>
 
         <section id="projects">
             <div class="container reveal ">
                 <h1 class="mt10">Arbeiten</h1>
-                <h2>Hier ist eine Auswahl verschiedener beispielhafter Projekte, an denen ich gearbeitet habe:</h2>
+                <h3>Hier ist eine Auswahl verschiedener beispielhafter Projekte, an denen ich gearbeitet habe:</h3>
 
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6" id="hemd">
@@ -108,7 +123,7 @@
                             <a href="./chiro.html"><img class="bg-image" src="./img/Chiro/Chiro_Preview.webp"
                                     alt="Chiro"></a>
                             <h2>Chiro</h2>
-                            <h3>Fahrradschläuche, Stecknadeln & Nägel</h3>
+                            <p class=description>Fahrradschläuche, Stecknadeln & Nägel</p>
                         </div>
                     </div>
 
@@ -117,7 +132,7 @@
                             <a href="./konstellationen.html"><img class="bg-image"
                                     src="./img/Konstellationen/Konstellationen_Preview.webp" alt="Konstellationen"></a>
                             <h2>Konstellationen</h2>
-                            <h3>Fahrradschläuche, Stecknadeln & Nägel</h3>
+                            <p class=description>Fahrradschläuche, Stecknadeln & Nägel</p>
                         </div>
                     </div>
 
@@ -126,7 +141,7 @@
                             <a href="./neue-welten.html"><img class="bg-image"
                                     src="./img/Neue_Welten/Neue_Welten_Preview.webp" alt="Neue Welten"></a>
                             <h2>Neue Welten</h2>
-                            <h3>Fotografie-Reihe</h3>
+                            <p class=description>Fotografie-Reihe</p>
                         </div>
                     </div>
 
@@ -136,7 +151,7 @@
                             <a href="./tape-und-papier.html"><img class="bg-image"
                                     src="./img/Tape_und_Papier/Tape_und_Papier_Preview.webp" alt="Tape und Papier"></a>
                             <h2>Tape und Papier</h2>
-                            <h3>Werkreihe aus Klebeband und Zeitungspapier</h3>
+                            <p class=description>Werkreihe aus Klebeband und Zeitungspapier</p>
                         </div>
                     </div>
                 </div>
@@ -150,38 +165,17 @@
                     <div class="col-sm-12 col-md-6 col-lg-4 projectContent">
                         <img src="./img/Plakat/Jahresausstellung.webp" alt="Jahresausstellung 2023">
                         <h2>Jahresausstellung 2023</h2>
-                        <h3>02.02.23 - 07.02.23 <br> Universität Osnabrück</h3>
+                        <p class=description>02.02.23 - 07.02.23 <br> Universität Osnabrück</p>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4 projectContent">
                         <img src="./img/Plakat/SkulpturgalerieCampus.webp" alt="Skulpturgalerie Campus">
                         <h2>CAMPUS – Junge Kunst aus Osnabrück</h2>
-                        <h3>03.03.23 – 14.04.23 <br> Skulpturgalerie Osnabrück</h3>
+                        <p class=description>03.03.23 – 14.04.23 <br> Skulpturgalerie Osnabrück</p>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4 projectContent">
                         <img src="./img/Plakat/Skulpturgalerie3D23.webp" alt="Skulpturgalerie 3D 23">
                         <h2>»3D’23« – Gruppenausstellung</h2>
-                        <h3>09.12.23–20.01.24 <br> Skulpturgalerie Osnabrück</h3>
-                    </div>
-                </div>
-        </section>
-
-        <section id="about-me">
-            <div class="container reveal">
-                <h1 class="mt10">Über mich</h1>
-                <div class="row">
-                    <div class="col-sm-12 col-md-4" id="aboutImage">
-                        <img src="img/aboutme.webp" alt="Zoé Pehlke">
-                    </div>
-                    <div class="col-sm-12 col-md-8 about-text">
-                        <div>
-                            <p>Mein Name ist Zoé Pehlke. Ich bin gebürtige Münsteranerin, lebe und arbeite derzeit in
-                                Osnabrück.</p>
-                            <p>In meinen bildhauerischen Arbeiten verwende ich Alltagsmaterialien und mache sie mir in
-                                veränderter Handhabung und durch Zweckentfremdung zu eigen. Die Materialerprobung, die
-                                Beschaffenheit, sowie die Spuren und Erhaltung spielen gerade durch die Wiederverwertung
-                                in meinen Arbeiten eine entscheidende Rolle.</p>
-                            <p>Seit 2024 bin ich Teil des Atelierhauses Nobbenburger Straße 13.</p>
-                        </div>
+                        <p class=description>09.12.23–20.01.24 <br> Skulpturgalerie Osnabrück</p>
                     </div>
                 </div>
         </section>
@@ -197,27 +191,23 @@
                     <div class="col-sm-12 col-md-6 socials">
                         <object data="svg/Instagram.svg" type="image/svg+xml" height="50"></object>
                         <a href="https://www.instagram.com/zoepehlke.art/?hl=de">@zoepehlke.art</a>
-
-
-
                     </div>
                 </div>
             </div>
             </div>
+            <div class="vertSpacer"></div>
+            <div class="vertSpacer"></div>
+            <div class="vertSpacer"></div>
         </section>
-        <div class="vertSpacer"></div>
 
     </main>
     </div>
 
     <footer class="mt-auto">
         <div class="container vert-center">
-            <div class="logo">
-                <img src="./img/logo.webp" alt="Logo" height="64px">
-                <div class="pehlke"> <span class="firstname">ZOÉ</span><span class="lastname"> PEHLKE</span>
-                </div>
+            <div class="pehlke"> <span class="firstname">ZOÉ</span><span class="lastname"> PEHLKE</span>
+                <div id="copyright">© 2025</div>
             </div>
-            <div id="copyright">© 2024</div>
         </div>
     </footer>
 
@@ -225,8 +215,11 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="glide.js"></script>
+   <!--  <script type="text/javascript" src="glide.js"></script> -->
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="p5circles.js"></script>
+
+
 </body>
 
 </html>

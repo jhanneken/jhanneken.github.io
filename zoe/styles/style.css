@@ -1,17 +1,12 @@
 /* colors */
-/* font */
-@font-face {
-  font-family: "Montserrat-Extra-Bold";
-  src: url(../font/Montserrat-ExtraBold.ttf) format("truetype");
-  font-weight: 800;
-}
-@font-face {
-  font-family: "Montserrat-SemiBold";
-  src: url(../font/Montserrat-SemiBold.ttf) format("woff2");
-  font-weight: 600;
-}
+/* .quicksand-regular {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} */
 * {
-  font-family: "Montserrat-SemiBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Quicksand", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #363947;
   font-weight: 600;
 }
@@ -27,52 +22,81 @@ body {
 
 html {
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 body {
-  font-size: 100%;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 h1 {
-  font-family: "Montserrat-Extra-Bold";
+  font-family: "Quicksand";
+  font-weight: 400;
   color: #363947;
   display: inline-block;
-  font-size: 1.4rem;
   text-transform: uppercase;
+  font-size: 2.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 576px) {
   h1 {
-    font-size: 1.6rem;
+    font-size: 3.2rem;
   }
 }
 @media (min-width: 768px) {
   h1 {
-    font-size: 2rem;
+    font-size: 3.6rem;
   }
 }
 @media (min-width: 992px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 4.2rem;
   }
 }
 
 h2 {
-  color: #575c72;
-  font-size: 1rem;
+  color: #363947;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 576px) {
   h2 {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 768px) {
   h2 {
-    font-size: 1.3rem;
+    font-size: 2.2rem;
   }
 }
 @media (min-width: 992px) {
   h2 {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
+  }
+}
+
+h3 {
+  color: #575c72;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+@media (min-width: 576px) {
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 992px) {
+  h3 {
+    font-size: 1.8rem;
   }
 }
 
@@ -212,49 +236,6 @@ nav {
 .projectContent img {
   width: 100%;
   height: auto;
-}
-.projectContent h2 {
-  margin-top: 1rem;
-  top: 0;
-  left: 0;
-  color: #363947;
-  font-size: 1.2rem;
-  font-family: "Montserrat-Extra-Bold";
-  text-transform: uppercase;
-}
-@media (min-width: 576px) {
-  .projectContent h2 {
-    font-size: 1.3rem;
-  }
-}
-@media (min-width: 768px) {
-  .projectContent h2 {
-    font-size: 1.4rem;
-  }
-}
-@media (min-width: 992px) {
-  .projectContent h2 {
-    font-size: 1.5rem;
-  }
-}
-.projectContent h3 {
-  color: #575c72;
-  font-size: 1rem;
-}
-@media (min-width: 576px) {
-  .projectContent h3 {
-    font-size: 1.1rem;
-  }
-}
-@media (min-width: 768px) {
-  .projectContent h3 {
-    font-size: 1.2rem;
-  }
-}
-@media (min-width: 992px) {
-  .projectContent h3 {
-    font-size: 1.2rem;
-  }
 }
 
 section {
@@ -543,11 +524,11 @@ header {
   overflow: hidden;
 }
 .pehlke span.firstname {
-  font-family: "Montserrat-Extra-Bold";
+  font-family: "Quicksand";
   color: #363947;
 }
 .pehlke span.lastname {
-  font-family: "Montserrat-Extra-Bold";
+  font-family: "Quicksand";
   color: #D55143;
 }
 
@@ -629,7 +610,7 @@ p {
   font-size: 2rem;
   color: #D55143;
   text-transform: uppercase;
-  font-family: "Montserrat-Extra-Bold";
+  font-family: "Quicksand";
 }
 @media (min-width: 576px) {
   .individual-caption a h5 {
@@ -787,4 +768,8 @@ p {
 
 .glide__bullet--active {
   background-color: #D55143;
+}
+
+.description {
+  color: #575c72;
 }/*# sourceMappingURL=style.css.map */
