@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Johannes Hanneken">
+    <meta name="description"
+      content="Diese Seite ist ein interaktives 3D-Demo, das mit three.js erstellt wurde.">
+    <title>Johannes Hanneken | three.js-Demo</title>
+    
+    <!-- Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/xwi5qau.css">
+  <script type="module" crossorigin src="/threejs_dir/assets/index-DutH-ZzV.js"></script>
+  <link rel="stylesheet" crossorigin href="/threejs_dir/assets/index-DjwiNX5W.css">
+</head>
+
+<body>
+  <!-- Three.js elements -->
+  <canvas id="bg">
+  </canvas>
+  <canvas id="vignette"></canvas>
+  <div class="content">
+    <div class="debugInfo" id="debugInfo">
+      <h2>Debug Info</h2>
+      <h2 id="state"></h2>
+      <h2 id="wantsToJump"></h2>
+      <h2 id="scrollPosition"></h2>
+    </div>
+    <div class="controls" id="controls">
+      <button id="schaukelButton">E Schaukeln</button>
+      <button id="vorButton">W Vor</button>
+      <button id="zurueckButton">S Zurück</button>
+      <button id="springenButton">F Springen</button>
+    </div>
+</body>
+
+</html>

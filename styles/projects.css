@@ -1,0 +1,20 @@
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+}
+
+.videoContainer {
+  width: 100%;
+}
+
+.videoContainer video {
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=projects.css.map */
